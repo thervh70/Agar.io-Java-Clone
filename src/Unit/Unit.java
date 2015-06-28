@@ -7,7 +7,7 @@ import game.Game;
  */
 public abstract class Unit {
 
-    protected int x = 0,y = 0, mass = 1;
+    protected int x = 0,y = 0, totalMass = 1;
     protected Game game;
 
     /**
@@ -31,8 +31,8 @@ public abstract class Unit {
         return new int[]{x,y};
     }
 
-    public int getMass() {
-        return this.mass;
+    public int getTotalMass() {
+        return this.totalMass;
     }
 
     public Game getGame() {

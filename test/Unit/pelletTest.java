@@ -30,12 +30,18 @@ public class PelletTest {
         when(grid.spawn(Pellet.class)).thenReturn(basicCoords);
     }
 
+    /**
+     * Simple test to see whether the mass is initiated the right way.
+     */
     @Test
     public void constructorMassTest() {
         Pellet pellet = new Pellet(game);
-        assertEquals(1, pellet.getMass());
+        assertEquals(1, pellet.getTotalMass());
     }
 
+    /**
+     * Test to see whether the basic coordinates are loaded well.
+     */
     @Test
     public void constructorCoordsTest() {
         Pellet pellet = new Pellet(game);

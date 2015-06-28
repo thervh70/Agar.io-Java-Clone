@@ -13,7 +13,7 @@ public class Pellet extends Unit{
      * @param game
      */
     public Pellet(Game game) {
-        this.mass = 1;
+        this.totalMass = 1;
         this.game = game;
 
         spawn();

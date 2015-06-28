@@ -1,10 +1,10 @@
 package game;
 
+import unit.Ball;
 import unit.Pellet;
-import unit.Player;
+import unit.Unit;
 
 import java.util.ArrayList;
-import unit.Unit;
 
 /**
  * Created by Robin on 28-6-2015.
@@ -30,16 +30,24 @@ public class Grid {
      */
     public int[] spawn(Object o) {
         if (o instanceof Unit) {
-            if (o instanceof Player) {
-                population.add((Player) o);
-                return new int[]{0, 1};
-            }
-            else if (o instanceof Pellet) {
+            if (o instanceof Pellet) {
                 population.add((Pellet) o);
-                return new int[]{20,20};
+                return new int[]{1,1};
+            }
+            else if (o instanceof Ball) {
+                population.add((Ball) o);
+                return new int[]{1,1};
             }
         }
         return null;
+    }
+
+    public int getWidth() {
+        return this.width;
+    }
+
+    public int getHeigth() {
+        return this.heigth;
     }
 
 }
