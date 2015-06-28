@@ -1,6 +1,6 @@
-package Unit;
+package unit;
 
-import Game.Game;
+import game.Game;
 
 /**
  * Created by Robin on 28-6-2015.
@@ -11,9 +11,13 @@ public abstract class Unit {
     protected Game game;
 
     /**
-     * Abstract Class that defines a spawn action of a unit.
+     * Class that defines a spawn action of a unit.
      */
-    public abstract void spawn();
+    public void spawn() {
+        int[] coords = game.getGrid().spawn(this.getClass());
+        this.x = coords[0];
+        this.y = coords[1];
+    }
 
     public int getX() {
         return this.x;
