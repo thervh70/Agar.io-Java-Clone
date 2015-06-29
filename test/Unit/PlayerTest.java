@@ -2,6 +2,7 @@ package unit;
 
 import game.Game;
 import game.Grid;
+import javafx.scene.paint.Color;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -36,7 +37,7 @@ public class PlayerTest {
      */
     @Test
     public void constructorMassTest() {
-        Player player = new Player(game);
+        Player player = new Player(game, "alpha", Color.BLACK);
         assertEquals(10, player.getTotalMass());
     }
 }

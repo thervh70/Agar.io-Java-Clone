@@ -35,12 +35,12 @@ public class Ball extends Unit{
         this.y += dy;
     }
 
-    /**
-     *
-     */
-    public Ball[] split() {
-        //TODO: This will interfere with the spawn statement included in the constructor.
-        Ball A = new Ball(this.game, this.mass / 2);
-        Ball B = new
-    }
+//    /**
+//     *
+//     */
+//    public Ball[] split() {
+//        //TODO: This will interfere with the spawn statement included in the constructor.
+//        Ball A = new Ball(this.game, this.mass / 2);
+//        Ball B = new
+//    }
 }
